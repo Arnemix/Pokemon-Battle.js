@@ -1,4 +1,5 @@
 import { Pokemon } from "./objects/Pokemon.js";
+import { fightTheme, customFightTheme, mainTheme } from "./soundManager.js";
 
 // Variables du jeu
 let pokemonsChoice = document.querySelectorAll(".card");
@@ -13,6 +14,8 @@ let playerSprite = document.querySelector(".player-pokemon-img img");
 let enemySprite = document.querySelector(".enemy-pokemon-img img");
 
 // <------------------- Fonctions utils du jeu ------------------->
+mainTheme.play();
+
 pokemonsChoice.forEach((pokemon) => {
     pokemon.addEventListener("click", () => {
         let pokemonName = pokemon.querySelector("p").textContent;
@@ -33,6 +36,8 @@ const showArena = () => {
 // <------------------- Lancement du jeu ------------------->
 
 const startGame = () => {
+    mainTheme.pause();
+    fightTheme.play();
     enemy = new Pokemon(pokemons[Math.floor(Math.random() * pokemons.length)]);
     hidePreGameContainer();
     showArena();
