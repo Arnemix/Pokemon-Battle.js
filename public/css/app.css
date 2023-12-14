@@ -8,6 +8,8 @@
 }
 
 #pre-game-container {
+  height: 100vh;
+  display: block;
   background-image: url("../../../../public/img/assets/pre-game-background.gif") !important;
   justify-content: center !important;
   text-align: center !important;
@@ -16,10 +18,34 @@
 
 .arena {
   height: 100vh;
-  width: 100%;
+  width: 69%;
   background-image: url("../../../../public/img/assets/battle-template.png") !important;
   background-size: contain;
   background-repeat: no-repeat;
+}
+
+#game-container {
+  display: none;
+}
+
+.cards {
+  gap: 20px;
+  align-items: center !important;
+  justify-content: center !important;
+}
+.cards :hover {
+  cursor: pointer;
+  transform: scale(1.1);
+  transition: 0.5s;
+}
+
+.card {
+  width: 200px !important;
+  align-items: center;
+}
+.card img {
+  height: 100px !important;
+  width: 100px !important;
 }
 
 /*# sourceMappingURL=app.css.map */

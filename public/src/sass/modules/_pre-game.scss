@@ -10,6 +10,8 @@
 }
 
 #pre-game-container {
+    height: 100vh;
+    display: block;
     background-image: url("../../../../public/img/assets/pre-game-background.gif") !important;
     justify-content: center !important;
     text-align: center !important;
