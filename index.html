@@ -1,14 +1,27 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pokemon-Battle.js</title>
     <link rel="stylesheet" type="text/css" href="public/css/app.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+    <link href="https://fonts.cdnfonts.com/css/pokemon-solid" rel="stylesheet">
+
 </head>
+
 <body>
-    <h1>Pokemon-Battle.js</h1>
-    <script src="public/scripts/script.js"></script>
+    <div id="app">
+        <div id="pre-game-container">
+            <div class="pg-title">
+                <h1 style="font-family: 'Pokemon Solid' sans-serif;">Bienvenue sur Pokemon-Battle.js</h1>
+            </div>
+            <br>
+            <input type="text" id="name" placeholder="Entrez votre nom" class="ui input">
+            <button id="start" class="ui button">Commencer</button>
+        </div>
+    </div>
 </body>
+
 </html>
