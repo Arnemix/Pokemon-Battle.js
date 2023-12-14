@@ -1,0 +1,25 @@
+class Pokemon {
+    constructor(name) {
+        this.name = name;
+        switch (name) {
+            case "Salameche":
+                this.type = "feu";
+                this.attacks = [];
+                this.hp = 100;
+                this.sprite = "public/images/assets/pokemons/salameche.gif";
+                break;
+            case "Carapuce":
+                this.type = "eau";
+                this.attacks = [];
+                this.hp = 100;
+                this.sprite = "public/images/assets/pokemons/carapuce.gif";
+                break;
+            case "Bulbizarre":
+                this.type = "plante";
+                this.attacks = [];
+                this.hp = 100;
+                this.sprite = "public/images/assets/pokemons/bulbizarre.gif";
+                break;
+        }
+    }
+}
