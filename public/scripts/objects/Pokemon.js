@@ -26,4 +26,7 @@ export class Pokemon {
                 break;
         }
     }
+    attack(attack, enemy){
+        
+    }
 }
