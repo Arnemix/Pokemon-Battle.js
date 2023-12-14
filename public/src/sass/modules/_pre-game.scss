@@ -17,3 +17,23 @@
     text-align: center !important;
     align-items: center !important;
 }
+
+.cards {
+    gap: 20px;
+    align-items: center !important;
+    justify-content: center !important;
+    :hover {
+        cursor: pointer;
+        transform: scale(1.1);
+        transition: 0.5s;
+    }
+}
+
+.card {
+    width: 200px !important;
+    align-items: center;
+    img {
+        height: 100px !important;
+        width: 100px !important;
+    }
+}

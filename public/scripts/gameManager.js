@@ -1,11 +1,18 @@
 import { Pokemon } from "./objects/Pokemon.js";
 
+// Variables du jeu
 let pokemonsChoice = document.querySelectorAll(".card");
 let player;
 let enemy;
 const pokemons = ["Salameche", "Carapuce", "Bulbizarre"];
 let preGameContainer = document.querySelector("#pre-game-container");
+let gameContainer = document.querySelector("#game-container");
+let playerArenaDiv = document.querySelector(".player-pokemon");
+let enemyArenaDiv = document.querySelector(".enemy-pokemon");
+let playerSprite = document.querySelector(".player-pokemon-img img");
+let enemySprite = document.querySelector(".enemy-pokemon-img img");
 
+// <------------------- Fonctions utils du jeu ------------------->
 pokemonsChoice.forEach((pokemon) => {
     pokemon.addEventListener("click", () => {
         let pokemonName = pokemon.querySelector("p").textContent;
@@ -19,7 +26,16 @@ const hidePreGameContainer = () => {
     // console.log(preGameContainer.style);
 };
 
+const showArena = () => {
+    gameContainer.style.display = "flex";
+};
+
+// <------------------- Lancement du jeu ------------------->
+
 const startGame = () => {
     enemy = new Pokemon(pokemons[Math.floor(Math.random() * pokemons.length)]);
     hidePreGameContainer();
+    showArena();
+    playerSprite.src = player.reverseSprite;
+    enemySprite.src = enemy.sprite;
 };

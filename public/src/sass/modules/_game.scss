@@ -4,28 +4,30 @@
     background-image: url("../../../../public/img/assets/battle-template.png") !important;
     background-size: contain;
     background-repeat: no-repeat;
+    div {
+        height: 50%;
+    }
 }
 
 #game-container {
     display: none;
 }
 
-.cards {
-    gap: 20px;
-    align-items: center !important;
-    justify-content: center !important;
-    :hover {
-        cursor: pointer;
-        transform: scale(1.1);
-        transition: 0.5s;
+// Gestion des sprites des pokémons
+.player-pokemon {
+    img {
+        height: 80%;
+        left: 20%;
+        position: relative;
+        z-index: 1;
     }
 }
 
-.card {
-    width: 200px !important;
-    align-items: center;
+.enemy-pokemon {
     img {
-        height: 100px !important;
-        width: 100px !important;
+        height: 80%;
+        position: relative;
+        left: 67%;
+        top: 80%;
     }
 }
