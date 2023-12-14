@@ -7,18 +7,21 @@ class Pokemon {
                 this.attacks = [];
                 this.hp = 100;
                 this.sprite = "public/images/assets/pokemons/salameche.gif";
+                this.reverseSprite = "public/images/assets/pokemons/salameche-reverse.gif";
                 break;
             case "Carapuce":
                 this.type = "eau";
                 this.attacks = [];
                 this.hp = 100;
                 this.sprite = "public/images/assets/pokemons/carapuce.gif";
+                this.reverseSprite = "public/images/assets/pokemons/carapuce-reverse.gif";
                 break;
             case "Bulbizarre":
                 this.type = "plante";
                 this.attacks = [];
                 this.hp = 100;
                 this.sprite = "public/images/assets/pokemons/bulbizarre.gif";
+                this.reverseSprite = "public/images/assets/pokemons/bulbizarre-reverse.gif";
                 break;
         }
     }
