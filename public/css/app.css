@@ -65,4 +65,18 @@
   top: 80%;
 }
 
+.player-attacks-row {
+  gap: 2%;
+  margin-left: 7%;
+}
+.player-attacks-row .player-attack {
+  font-size: large;
+  cursor: pointer;
+  text-align: center;
+  background-color: white;
+  border-radius: 10px;
+  width: 45%;
+  border: 1px solid black;
+}
+
 /*# sourceMappingURL=app.css.map */

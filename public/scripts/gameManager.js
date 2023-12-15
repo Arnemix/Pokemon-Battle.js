@@ -33,9 +33,33 @@ const showArena = () => {
     gameContainer.style.display = "flex";
 };
 
-// <------------------- Lancement du jeu ------------------->
+const showPlayerAttacks = () => {
+    let playerAttacksDiv = document.querySelector(".player-pokemon-attacks");
+    let firstRow = document.createElement("div");
+    firstRow.classList.add("player-attacks-row");
+    firstRow.style.display = "flex";
+    playerAttacksDiv.appendChild(firstRow);
+    let secondRow = document.createElement("div");
+    secondRow.classList.add("player-attacks-row");
+    secondRow.style.display = "flex";
+    playerAttacksDiv.appendChild(secondRow);
+    for (let i = 0; i < player.attacks.length; i++) {
+        let attack = player.attacks[i];
+        if (i < 2) {
+            let attackDiv = document.createElement("div");
+            attackDiv.classList.add("player-attack");
+            attackDiv.innerHTML = `${attack.name} (${attack.damage} dgt)<br>${attack.uses} restant(s)`;
+            firstRow.appendChild(attackDiv);
+        } else {
+            let attackDiv = document.createElement("div");
+            attackDiv.classList.add("player-attack");
+            attackDiv.innerHTML = `${attack.name} (${attack.damage} dgt)<br>${attack.uses} restant(s)`;
+            secondRow.appendChild(attackDiv);
+        }
+    }
+};
 
-const startGame = () => {
+const setupGameElements = () => {
     mainTheme.pause();
     fightTheme.play();
     enemy = new Pokemon(pokemons[Math.floor(Math.random() * pokemons.length)]);
@@ -43,4 +67,11 @@ const startGame = () => {
     showArena();
     playerSprite.src = player.reverseSprite;
     enemySprite.src = enemy.sprite;
+    showPlayerAttacks();
+};
+
+// <------------------- Lancement du jeu ------------------->
+
+const startGame = () => {
+    setupGameElements();
 };
