@@ -12,14 +12,14 @@ export class Pokemon {
                 break;
             case "Carapuce":
                 this.type = "eau";
-                this.attacks = [new Attack("Pistolet à eau", 10, 25), new Attack("Bulles d'eau", 15, 10), new Attack("Hydrocanon", 15, 10), new Attack("Tornade", 35, 1)];
+                this.attacks = [new Attack("Pistolet à eau", 10, 25), new Attack("Bulles d'eau", 20, 3), new Attack("Hydrocanon", 15, 10), new Attack("Tornade", 35, 1)];
                 this.hp = 100;
                 this.sprite = "public/img/assets/pokemons/carapuce.gif";
                 this.reverseSprite = "public/img/assets/pokemons/carapuce-reverse.gif";
                 break;
             case "Bulbizarre":
                 this.type = "plante";
-                this.attacks = [new Attack("Fouet Lianes", 10, 26), new Attack("Enracinement", 20, 3), new Attack("Balles Graines"), new Attack("Sève Stellaire", 35, 1)];
+                this.attacks = [new Attack("Fouet Lianes", 10, 25), new Attack("Enracinement", 20, 3), new Attack("Balles Graines", 15, 10), new Attack("Sève Stellaire", 35, 1)];
                 this.hp = 100;
                 this.sprite = "public/img/assets/pokemons/bulbizarre.gif";
                 this.reverseSprite = "public/img/assets/pokemons/bulbizarre-reverse.gif";

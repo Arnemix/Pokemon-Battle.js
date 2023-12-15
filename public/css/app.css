@@ -49,6 +49,7 @@
 
 #game-container {
   display: none;
+  justify-content: center;
 }
 
 .player-pokemon img {
@@ -66,17 +67,22 @@
 }
 
 .player-attacks-row {
-  gap: 2%;
+  gap: 8%;
   margin-left: 7%;
 }
 .player-attacks-row .player-attack {
   font-size: large;
   cursor: pointer;
   text-align: center;
-  background-color: white;
+  background-color: whitesmoke;
   border-radius: 10px;
-  width: 45%;
+  width: 40%;
   border: 1px solid black;
+  box-shadow: 0 0 5px 2px black;
+}
+.player-attacks-row .player-attack:hover {
+  transform: scale(1.1);
+  transition: 0.5s;
 }
 
 /*# sourceMappingURL=app.css.map */
