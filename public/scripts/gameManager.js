@@ -70,7 +70,7 @@ const writeNewFightInformation = (information) => {
     let newInformation = document.createElement("div");
     newInformation.classList.add("information");
     newInformation.innerHTML = information;
-    fightInformations.appendChild(newInformation);
+    fightInformations.prepend(newInformation);
 };
 
 const startAttacksManager = () => {
@@ -92,7 +92,7 @@ const startAttacksManager = () => {
                             } else {
                                 writeNewFightInformation(`Le combat est terminé.`);
                                 let winner = player.hp > enemy.hp ? player.name : enemy.name;
-                                
+
                                 writeNewFightInformation(`Le gagnant est ${winner}.`);
                             }
                         }

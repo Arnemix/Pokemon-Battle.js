@@ -53,11 +53,9 @@
 
 // ----------- Partie droite de la page ----------------
 .fight-informations {
-    // flex-direction: column-reverse;
-    overflow: scroll;
+    overflow-y: auto;
     display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
+    flex-direction: column-reverse;
     background-color: black;
     gap: 5%;
     width: 32%;
@@ -71,4 +69,9 @@
 .information {
     color: white;
     margin-left: 4%;
+    border: 1px solid whitesmoke;
+    padding: 2%;
+    border-radius: 10px;
+    background-color: rgb(0, 0, 0);
+    box-shadow: 0 0 5px 2px white;
 }
