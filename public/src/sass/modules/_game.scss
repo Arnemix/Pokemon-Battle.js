@@ -11,7 +11,6 @@
 
 #game-container {
     display: none;
-    justify-content: center;
 }
 
 // Gestion des sprites des pokémons
@@ -50,4 +49,26 @@
             transition: 0.5s;
         }
     }
+}
+
+// ----------- Partie droite de la page ----------------
+.fight-informations {
+    // flex-direction: column-reverse;
+    overflow: scroll;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    background-color: black;
+    gap: 5%;
+    width: 32%;
+    height: 100vh;
+    h1 {
+        color: white;
+        margin-left: 4%;
+    }
+}
+
+.information {
+    color: white;
+    margin-left: 4%;
 }

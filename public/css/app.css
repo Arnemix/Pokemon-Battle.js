@@ -49,7 +49,6 @@
 
 #game-container {
   display: none;
-  justify-content: center;
 }
 
 .player-pokemon img {
@@ -83,6 +82,25 @@
 .player-attacks-row .player-attack:hover {
   transform: scale(1.1);
   transition: 0.5s;
+}
+
+.fight-informations {
+  overflow: scroll;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  background-color: black;
+  gap: 5%;
+  width: 32%;
+}
+.fight-informations h1 {
+  color: white;
+  margin-left: 4%;
+}
+
+.information {
+  color: white;
+  margin-left: 4%;
 }
 
 /*# sourceMappingURL=app.css.map */
