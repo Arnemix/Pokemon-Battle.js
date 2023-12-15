@@ -92,6 +92,7 @@ const startAttacksManager = () => {
                             } else {
                                 writeNewFightInformation(`Le combat est terminé.`);
                                 let winner = player.hp > enemy.hp ? player.name : enemy.name;
+                                
                                 writeNewFightInformation(`Le gagnant est ${winner}.`);
                             }
                         }
