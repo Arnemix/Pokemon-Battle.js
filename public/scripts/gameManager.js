@@ -60,6 +60,11 @@ const showPlayerAttacks = () => {
     }
 };
 
+const updateAttacksDiv = () => {
+    let playerAttacksDiv = document.querySelector(".player-pokemon-attacks");
+    playerAttacksDiv.innerHTML = "";
+};
+
 const writeNewFightInformation = (information) => {
     let fightInformations = document.querySelector(".fight-informations");
     let newInformation = document.createElement("div");
@@ -80,6 +85,7 @@ const startAttacksManager = () => {
                             if (enemy.hp > 0 && player.hp > 0) {
                                 enemy.hp -= attack.damage;
                                 showPlayerAttacks();
+                                startAttacksManager();
                                 writeNewFightInformation(`${player.name} utilise ${attack.name} et inflige ${attack.damage} points de dégâts.`);
                                 let enemyAttack = enemy.attacks[Math.floor(Math.random() * enemy.attacks.length)];
                                 writeNewFightInformation(`${enemy.name} utilise ${enemyAttack.name} et inflige ${enemyAttack.damage} points de dégâts.`);
@@ -99,6 +105,9 @@ const setupGameElements = () => {
     mainTheme.pause();
     fightTheme.play();
     enemy = new Pokemon(pokemons[Math.floor(Math.random() * pokemons.length)]);
+    enemy.attacks.forEach((attack) => {
+        attack.uses = 100;
+    });
     hidePreGameContainer();
     showArena();
     playerSprite.src = player.reverseSprite;
